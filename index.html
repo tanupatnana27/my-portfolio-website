@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tanuja Patnana Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  max-width: 1250px;   /* increased size */
+  width: 100%;
+  gap: 25px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  background: #111827;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.sidebar img {
+  width: 110px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  margin-bottom: 10px;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+}
+
+.sidebar p {
+  color: #94a3b8;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  background: #111827;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* NAV */
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: #cbd5f5;
+  margin-right: 25px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.navbar button.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+/* SECTIONS */
+.section { display: none; }
+.section.active { display: block; }
+
+h2 { margin-bottom: 10px; }
+h3 { margin-top: 15px; color: #38bdf8; }
+
+p { color: #cbd5f5; line-height: 1.6; }
+
+li { margin-bottom: 6px; }
+
+/* PROJECT CARD */
+.project-card {
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* CONTACT FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button.submit {
+  background: #38bdf8;
+  border: none;
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .container { flex-direction: column; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhMSEhMVFRUXGBYSFxUWFRgVFxcWGBUWFhUXGBgYHSogGBolHRYVITEhJykrLi4uFx8zODM4NygtLysBCgoKDg0OGxAQGysmHSUvLS0vKy0tLTUtLi8vLS0tLS8vLS0tKy0tLS0tLS0rLS0tLS0tLS0wLS0tLi0tLS0tLf/AABEIAOAA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcDBAUBAgj/xABCEAACAQEDCAcFBAkEAwAAAAAAAQIDBAURBhIhMUFRYXETIjJSgZGhQnKxwdEHI2LCM0NjgpKisuHwFCRz0jREVP/EABoBAQADAQEBAAAAAAAAAAAAAAACAwQFAQb/xAAnEQADAAICAgEDBQEBAAAAAAAAAQIDEQQxEiFBE1FhIjJxgZGxQv/aAAwDAQACEQMRAD8AvEAAAAAAAAAHjklpZGb3yxpU8Y0V0st+qCfP2vDzBOMdW9SiTNnGt+VFmpYrPz5d2n1n56l5kBvK+K9f9JNtdxdWHktfjiaGAN+Pg/Nv/CXWvLmb/RUoxW+bxf8ACsPizk2nKa1z/WuK3QSj64Y+pyDxvDS9CWlt6Egap4+OekbNS31pdqrUfOpL6mF1Hvfmzg23KalDFQTqPetEP4nr8EcqrlRXfZUIr3XJ+bfyIO0jx5sc+v8AhMlUe9+bM1O3VY9mrUXKcvqQFZRWnvr+CP0NihlTWXbjCS4Jxfni16D6iI/XxvtFiWfKS1w1Vm+EkpfFY+p1rJlxUX6WlGS3wbi/J4p+hX1gygo1HmtunLdLDB8pavPA6zJJp9EvpYci3pFk2HKyy1ME59G91RZv83Z9TuRkmsU8VvKaNu77zrUHjSm4ru64PnF6PLSembJwV/4f+ltgid0ZaU5YRrro5d9aYPntj8OJKoTTSaaaelNaUwYMmOoeqR9AAEAAAAAAAAAAAAAAAAaF7XtSs8M6o9fZitMpPcl89RqZRZQQs0cFhKq11YbvxS3L4lcWy1TqzdSpJyk9r+CWxcAa+PxXk/U+jo31lBVtDabzKeynHU/eftP04HJAB1YiZWpQAAJHkpJJtvBLS29SS1shF93xKtJxjiqSeiPe/FL6bCQZVVnGztL25Rh4aZPzzcCFlWR/Bj5NvfigACoyAAAA72T19ODVKo8YPRGT9h7Fj3fhyOCGj1PRKacvaLMBqXTXc6NKb1uKx5rQ36G2aU9nUT2tg6Nz33Wsz6jxhtpy7L5d18Uc4A8qVS00Wnct90rTHGDwku1B9pfVcUdMpyhWlCSnCTjJaU1rX+biw8mso42hZk8I1Vs2TW+PzWwHL5HFcfqnokAABjAAAAAAAAABxcpb9jZoaMHUl2I/mfBepu3teMaFKVWezUtspPVFFW261zq1JVKjxlLyS2RXBA1cXj/Ue30jHXrSnJzm3KUni29bZ8AA7GgAAAAR+9MpYxxjRSnLvvsLkvafpzPG0uyF3MrbNjKuljZ2+7KMvjH8xCzNarVOo86pJyfF6FyWpeBhKKe2c/LautoAAiVgAAANgAFgXPSzaFKL15ib5vT8zcONc9/xq4QnhCps7svd3PgzsmmWmvR1MdS5WgAD0mD2E2mpJtNNNNaGmtTR4ACxslsoFaI5k8FVitO6a7y+a2EgKds9eUJxnB4Si8U+P02FoXDesbRSU1oa6s492S1+G1cAcnlcf6b8p6OkAAYwAAAGCP5Z3p0NDMi8J1MYLeo+3Ly0c2gSiHdKURPKu9+nrYRf3dPGMdzeqU/kuHM4p4eg70QolSgAASABxsqLwdOlmReEqmKx3RXafjq8WeN6WyN14rbOVlFfWe3SpvqLRKS9t7V7nx5HBCBnb32cyqdPbAAPCIAAAAAAAAAZKcnL7csKNV9bVCb9r8Mnv3Pb8YsD2Xpk4tw9oswHMuC8ump9btxwjLjul4/FM6ZoT37OnNKltAAHp6Dp5O3q7PWU32JdWovw7Jc1r5YnMAI3KpaZcsZJpNaU9OJ6RfIW9M+k6Mn1qerjB6vJ6PIlAOFkhxTlgAAgCr8qbw6a0zafVh93HlF9Z+MsfDAsC/rb0Nnq1NqjhH3n1Y+rRVCQOhwcft2egAHSAAABBcorTn2ie6P3a/d1+rkTnOw07tPkVrKeLcntbfm8SrIzLyn6SPAAVGIAAAAAAARWLUUm29Cili3yS0sltx/Z/aq2Eq3+3p/iWNRrhT2c5Ncjx0l2e9kWs9CVScadOLnOTwjGKxbfBHw1s8PHaXncGT9nsccKMOs1hKpLTUlzlsXBYIrD7Qro/wBPa5SSwp1sa0N2c397Hwk8eU0QnIm9HrnS2RoAFhE6Fw2zoq0H7MupLk3ofg8H5k8ZWTRYt31+kpU596MW+eGn1xLcb+DZxa7k2AAWmsAAA3rjt/QV6dTHqp5svclol5a/AthMphlnZJW3pbNTbemK6OXOOheawfiDnc7H1f8AR2QeHoOcRH7Q7ThTpUu9JzfKC+sl5EHJFl5WzrSo9yEV4ybb+RHQdriz44kAADQAAAa941M2jVluhN/ysrtFgXz/AOPW9yXwK/KcnZi5X7kADNZLLUqzVOlCVSb1RisXz4Li9BWZTCexTbUUm29UUsW+SWllhXH9muqVsqYbeipP0lU+UfMnN2XVQs6zaFKFPe4rrP3pvrS8WVVlS6JqGypLuyJt1bBqj0cX7VaXR/y6ZehKrs+zKmtNoryn+CksyPLOeMn4YE9BU8tMkoRo3Vc9nsywoUYU98ksZvnN9Z+ZvAFbeyQOPlXcStlnlS0KouvSk9k0tT/DJaHzx2HYB6nr2Gtn55q05RlKE4uMotxlF6HGS0NM+S1svskv9Qv9RQX38V1oL9dFbv2iWretG4qk1zSpFLWgTfJieNmhwc1/M/qQgm+S8cLNDi5v+d/Qux9l/G/f/R1QAXG8AAAEw+zy09atS3qNRf0y/KQ87WRtfNtdP8SlDzWcvWKBTyZ8sTRZgPD0HDKtypqY2uvwko+UIo5ZvX8/9zX/AOSXxNEHfxLUL+EAACYAABhttPOp1I74SXnFlcRZa92WN1aihqWuT3R+uwgFa4ajt07FT7XSypxb1KHaU3wUOsUZKW9GPla2j6yYydq22o4w6tOOHSVWsVHHVFL2pvd4vjcFyXNQskOjoQzce1N6Zze+ctvLUtiMt1XbTs1KFCksIRXjJvtTlvk3pNoxXfl/BTM6AAKyQAAAAAAAAAK2+0zJtRbttGOiTSrxWyT0KqlsTeiXFp7WWSfFooQqQlTqLOhNOEovbFrBolFeL2eNbR+emT+5YYWeivwRfi1i/iQ28bqnStM7Jrmqiop97Oa6N+MZRfiWVeV29BJQTxjgs18FoafFfNG/HS2T4v7magALzcAAADcuWpm2ig/2kPV4fM0zNYn97T9+H9SBG1uWi4AAD58qi/44Wmv/AMkvXSaB1srKeba63Fxl5wj/AHOSDv4nuE/wgAATAAAJBktHRUe3GK8MGzahc0FbJWxduVFUWuKli583HNj+6czJu1KM3B6FNLD3ljgvFN+hJTncjat/kx5V+r2AAUFYAAAAAAAAAAAAAABF7Xk/0l7UrS11KdFTlxqqUoU15af3EdHKiK6KL2qfxTx+COviR7Ke1JuNJez1pc3oiueGPmi/DurX4J4p/UcQAHRNoAAAM1hWNWkv2kP6kYTeuGnnWmgv2kX5db5Ajb1LZbAPD0Hz5X+X9DC0Qn34YeMW8fSSIyT37QLLnUYVF7E9Puz6r9c0gQO1xK8sSAABoAAAB17LlBOKwnFT445r8djOQCNRNdo8qVXZOaFVSjGS1SSl5rUfZx8mrVjB03rjpXGL+j+KOwczJPjTRiqdPQABAiAAAAAAAAAD5qTUU5PUk2+SWJ9HIyktWbTVNa56/dWn1eHqTifKkiUrb0adoyhm1hCCg97ec1yWo40m28Xpb0tva94B0piZ6RsmVPQABMkAAADvZEUM61xfcjKf5V/UcEmn2eWXq1qr2tU1+6sX/UvIFHJrxxMmIGABxDWvSyKrSqUn7UWuT2PweBUbi1imsGm01uaeDXmXMVvlpd/RWhzS6tXrr3vbXwfiDfwcmqc/c4IAB0wAAAAADLZLTKnNTjrWzetqJnZ68ZxU4vFPzW9PiiDm7dd4yoy3xfaj81uZRnxea2uyrJj8vaJeDHZrRGpHOg8V6p7mtjMhzmtdmUAAHgAAAAPitVjCLlJpJa2/80sHorVYwi5SeCSxf05kMttpdSbm9upblsRs3reTrPBYqC1La33nx+BoHQwYvBbfZqxY9e2AAaC0AAAAAA8bLVyesPQ2enTfawxl70utL1eHgQHJa7+mtEE+zD7yXg+qvF4eGJaAObzsntQgAAc8HJynuv8A1FCUV249eHvLZ4rFeJ1gCU05e0Uz/nLgCTZbXN0c+ngupN9b8M9/KXx5kZB3MWRZJ8kAACwAAAAAAy2a0zpvOhLB+j4NbTvWPKCD0VFmPesXH6r1I4Cu8U32QrGq7JzSrRksYyUlwaZ9kZyYX30vcf8AVEkxz8seFaMtz4vQPJzSWLaS3tpL1PSPZVdqlyl8UeY4860Inyejctl/U46Idd+UfPb4EftlsnVeM3juS0Jcl89ZgB0YxTHRqnGpAALCYAAAAAAPGeneyQufp6ufNfd02m90p64x5LW/DeCGS1EumSrI+6uhoJyWE6mE5b0vZj4L1bO8ADhXTunTAABEAAAw2uzRqQlTmsYyWDXAq6+rrlZ6rpy0p6YS70fqtv8Actc0b4uuFopunPnGS1xlsaBo4+d4q99FTg2bysFShUdOotOtPZJd5f5oNYHZVJraAAB6ADHXrRhFyk8F8eC3sBtL2zIatqt9OGt4vurS/Hccm2XnOehdWO5a3zf0NBF04vuYsvL+ILQyasizI2hTzukhoSWhJtYpvbJNYeDO2Vfk5lJUsuMcM+k3i4Y4NPbKD2ctT4aya2XK2xzX6XMe6pFxa8Vin5nN5HHyKt62ipZfL2+ztnPva6+mzWpZsoppYrQ8dOndq1mCvlRY4rHp4vhFSk/REVyhywlWjKlQi4QeiU2+vJbUkuwnzb5EMODK62lr8nv1VPtGKlb6cpOKksU2tOhSweGMXtTNpkQwNyx3jOGjHOj3X8nsOq8X2J4+Z8WSMGGzWiM450XzW1PczMUm1NNbQAAPQAZrFZJ1ZqnTWdJ+SW1t7EgG0ltmS67vnXqRpQ1vS3sjHbJ/5rLSu6wwo0404LCMfNva3xes1rhueFmp5q0yemc9sn8ktiOmDjcnP9R6XQAAMwAAAAAAAABo3vddO0QzKi4xku1F70ytr5uirZpYTWMX2Zrsy+j4FrmK02aFSLhOKlF601igaMHIrE9fBTwJRfmSE4Yzs+M4dz248n7S9eZF2taehrQ09DT3NbAdbHlnItywRu87V0k3h2Voj834nbvKtmU5Pa+qub/tiRkuxL5MvLydSgAC4wgAAAAAAAAGxYrS6c1LZqkt6/trJMiIkhuetnU0tser4a16fAqyr5NvEye3JvA8JJcmSVSrhKtjTp7vbkuXsrnp4FBsyZJhbpnHuu7KtonmU170n2Yre38tbLJuO5qdmhmw0yfam9cn8lwNqxWOnSioU4qMVsXxb2vibAOTn5NZPS6AABmAAAAAAAAAAAAAAABy72uChaNM44S2Tjol9H44nUAPZpy9oqnKzIm1pRdFKtBNtqOEZ7MOq3p26n4ECqwcZOM4yhJa4yTjJc4vSj9JmpeF2Ua8c2tShUX44p4cm9RZOTS0TrLVPdH52PC3rx+zKxz00pVKL3Rlnx8p4vyaI9bPsttEf0VelPhOMqb9M4tWSWe+SIECUV/s/vGP6qMvdqR/NgajyNvBf+rP+Kn/ANj3yX3Pdo4QO6sjrw/+Sp/FD/sbVHIC8ZfqYx4yqQ+TbPfJfcbRGD0nVj+y61S/SVqVP3VKo/yokF3/AGYWWGmrOrWe7FU4+UOt/MReSUeeSKlim2opNyeqKTbfJLSyb5JZGWyTcqkOhpyS01O3itWFPWtDevAs+7Lns9nWFCjCnvzYpN83rfib2BXWTa0eLK5e5OPc+TlChg1HOn356X4LVHwOwAVEap09tgAAiAAAAAAAAAf/2Q==" alt="AI Profile">
+
+<h1>Tanuja Patnana</h1>
+<p>Full Stack Developer</p>
+
+<ul>
+  <li>Email: tanupatnana27@gmail.com</li>
+  <li>Phone: 6281316874</li>
+  <li>Location: Vizag, AP</li>
+</ul>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="navbar">
+  <button class="nav-btn active" onclick="showPage('about',event)">About</button>
+  <button class="nav-btn" onclick="showPage('resume',event)">Resume</button>
+  <button class="nav-btn" onclick="showPage('portfolio',event)">Projects</button>
+  <button class="nav-btn" onclick="showPage('contact',event)">Contact</button>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section active">
+  <h2>About Me</h2>
+
+  <p>
+I am a dedicated and enthusiastic student with a strong interest in Full Stack Development. 
+I have a good foundation in HTML, CSS, JavaScript, Java, and basic Python, and I enjoy building responsive and user-friendly web applications.
+</p>
+
+<p>
+I am continuously learning new technologies and improving my problem-solving skills through practical projects. 
+I am passionate about growing as a developer and contributing effectively in a professional environment.
+</p>
+</div>
+
+<!-- RESUME -->
+<div id="resume" class="section">
+  <h2>Education</h2>
+  <ul>
+    <li>B.Tech - Vignan's Institute of Engineering for Women (2024–2028)</li>
+    <li>Intermediate - A.P.R Junior College</li>
+    <li>SSC - Z.P High School</li>
+  </ul>
+
+  <h3>Technical Skills</h3>
+  <ul>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Java Programming</li>
+    <li>Python Basics</li>
+    <li>Git & GitHub</li>
+  </ul>
+
+  <h3>Professional Skills</h3>
+  <ul>
+    <li>Team Management</li>
+    <li>Adaptability</li>
+    <li>Time Management</li>
+    <li>Good Communication Skills</li>
+  </ul>
+
+  <h3>Languages</h3>
+  <ul>
+    <li>Telugu</li>
+    <li>English</li>
+  </ul>
+</div>
+
+<!-- PROJECTS -->
+<div id="portfolio" class="section">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <h3>Python Calculator</h3>
+    <p>
+      A simple calculator application built using Python that performs arithmetic operations like addition, subtraction, multiplication, and division.
+    </p>
+    <p>
+      This project helped me understand programming fundamentals such as functions, user input, and logic building.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <h3>Contact Form Website</h3>
+    <p>
+      A responsive contact form built using HTML, CSS, and JavaScript that allows users to send messages through a simple interface.
+    </p>
+    <p>
+      This project demonstrates form handling, input validation, and user-friendly design.
+    </p>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h2>Contact Me</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button class="submit">Send Message</button>
+  </form>
+</div>
+
+</div>
+</div>
+
+<script>
+function showPage(page, event) {
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
+
+  document.getElementById(page).classList.add("active");
+  event.target.classList.add("active");
+}
+</script>
+
+</body>
+</html>
